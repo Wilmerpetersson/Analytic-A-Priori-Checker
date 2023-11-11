@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytic A Priori Checker</title>
+</head>
+<body>
+    <h1>Analytic A Priori Checker</h1>
+    <form method="post">
+        Enter phrases separated by a comma:<br>
+        <input type="text" name="input_text" value="{{ input_text }}">
+        <input type="submit" value="Check">
+    </form>
+    {% if result %}
+        <p>Result: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
