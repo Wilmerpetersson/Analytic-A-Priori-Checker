@@ -6,6 +6,7 @@ from nltk.stem import WordNetLemmatizer
 nltk.data.path.append('/nltk_data')
 
 app = Flask(__name__)
+app.config.from_object(__name__)
 
 # Initialize the lemmatizer
 lemmatizer = WordNetLemmatizer()
@@ -126,4 +127,4 @@ def index():
     return render_template('index.html', result=None, input_text="")
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=8080)
+    app.run(host='0.0.0.0',port=8080)
