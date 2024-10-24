@@ -110,13 +110,7 @@ def hello_world():
                     <input type="text" name="phrases"><br><br>
                     <input type="submit" value="Check">
                 </form>
-                <p>{{ result|safe }}</p> <!-- The |safe filter allows HTML to be rendered -->
-                <br>
-                <br>
-                <br>
-                <h2>Tutorial</h2>
-                <img src="{{ url_for('static', filename='apriori-checker.gif') }}" style="max-width: 100%;">
-                <p>Contact: wilmerpettersson6@gmail.com </p>
+                <p>{{ result|safe }}</p>        
             </body>
         </html>
     ''', result=result)
