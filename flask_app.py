@@ -79,7 +79,7 @@ def is_analytical_a_priori(phrase1, phrase2):
     return False
 
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():
+def template_logic(): 
     if request.method == 'POST':
         phrases_input = request.form['phrases']
         phrases = phrases_input.split(',', 1)  # Split the input into two phrases at the first comma
